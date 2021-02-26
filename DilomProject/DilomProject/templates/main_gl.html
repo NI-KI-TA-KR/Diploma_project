@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %} ГОЛОВНА {% endblock %}
+
+{% block content%}
+
+
+
+  {% for message in messages %}
+        <p id="messages"><strong><font color=green>{{message}}</font></strong></p>
+   {% endfor %}
+
+   <main class="pt-5 max-lg-6">
+        <div class="row">
+         <div class="col-7 ml-auto mr-auto"> 
+             <div class="card">
+                <div class="card-body px-lg-3 pt-0">
+                <hr>
+                    <h2 class="h1-responsive font-weight-bold text-center my-4"><i class="fas fa-italic"></i><i class="fas fa-remove-format"></i><strong class="black-text"> - Candidate</strong></h2>
+                <hr>
+                <h5 class="text-center w-responsive mx-auto mb-4">Application Management System for Candidates for Positions in an IT Company</h5><hr>
+                <div class="row">
+                     
+
+                    <!--Grid column-->
+                    <div class="col-md-4">
+                        <div class="md-form mb-0">
+                            <center>
+                                <div class="alert alert-danger" role="alert" id="messages">
+                                    <h1 class="text-center w-responsive mx-auto mb-2"><strong>{{count_users}}</strong></h1>
+                                </div>
+                            <hr>
+                            <h3 class="text-center w-responsive mx-auto mb-4">Users</h3>
+                            </center> 
+                        </div>
+                    </div>
+                    
+                     <div class="col-md-4">
+                        <div class="md-form mb-0">
+                            <center>
+                               <div class="alert alert-success" role="alert" id="messages">
+                                <h1 class="text-center w-responsive mx-auto mb-2"><strong>{{count_resume}}</strong></h1>
+                                </div>
+                            <hr>
+                            <h3 class="text-center w-responsive mx-auto mb-4">Resume</h3>
+                            </center> 
+                        </div>
+                    </div>
+                    
+                     <div class="col-md-4">
+                        <div class="md-form mb-0">
+                            <center>
+                                <div class="alert alert-info" role="alert" id="messages">
+                                <h1 class="text-center w-responsive mx-auto mb-2"><strong>{{count_comment}}</strong></h1>
+                                </div>
+                            <hr>
+                            <h3 class="text-center w-responsive mx-auto mb-4">Comments</h3>
+                            </center> 
+                        </div>
+                    </div>
+        
+                </div>
+                 </div>
+             </div>
+        </div>
+        </div>
+    </main>
+
+{% endblock %}

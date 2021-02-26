@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %} List resume {% endblock %}
+         {% block content %}
+ <br><br>
+        
+     <table id="dtBasicExample" class="table table table-hover table-bordered white lighten-2" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th class="th-sm">Name
+      </th>
+      <th class="th-sm">Position
+      </th>
+      <th class="th-sm">System position
+      </th>
+      <th class="th-sm">Date
+      </th>
+      <th class="th-sm">Suit
+      </th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   {% if latest_resume_list %}
+      {% for a in latest_resume_list %}
+    <tr>
+      <td><a href="{% url 'resume:detail_resume' a.id %}"><font color="red"><strong>{{a.resume_PIB}}</strong></font></a></td>
+      <td>{{a.resume_position}}</td>
+      <td>{{a.user.position_area.system_position}} {{a.user.position_area.system_area}} </td>
+      <td>{{a.resume_date}}</td>
+      <td class="alert alert-success">Suit</td>
+    
+     {% endfor %}
+     
+     {% else %}
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td> </td>
+      <td></td>
+    </tr>
+     {% endif %}
+  </tbody>
+  <tfoot>
+   <tr>
+      <th class="th-sm">Name
+      </th>
+      <th class="th-sm">Position
+      </th>
+      <th class="th-sm">System position
+      </th>
+      <th class="th-sm">Date
+      </th>
+      <th class="th-sm">Suit
+      </th>
+      
+    </tr>
+  </tfoot>
+</table>
+    
+{% endblock %}

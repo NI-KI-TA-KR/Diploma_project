@@ -1,0 +1,411 @@
+{% extends 'base.html' %}
+
+{% block title %}Add resume{% endblock %}
+
+{% block content%}
+<main class="pt-5 max-lg-5">
+     <div class="col-10 ml-auto mr-auto"> 
+         <div class="card">
+            
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!--Section: Contact v.2-->
+<section class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Add resume for position</h2>
+    <!--Section description-->
+    <hr>
+    <p class="text-center w-responsive mx-auto mb-4">Do you want to work in our company? Fill out the form and wait for a response from the employer </p> <hr> <br>
+    
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="/create_resume" method="POST">
+
+               {% csrf_token %}
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="PIB" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="adress" name="adress" class="form-control">
+                            <label for="adress" class="">Home address</label>
+                        </div>
+                    </div>
+                   
+                     <div class="col-md-6">
+                         <div class="md-form mb-0">
+                            <input type="text" id="phone" name="phone" class="form-control">
+                            <label for="phone" class="">Phone number</label>
+                        </div>
+                     </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                         <div class="md-form mb-0">
+                            <input type="text" id="link_github" name="github" class="form-control">
+                            <label for="link_github" class="">Github link</label>
+                        </div>
+                     </div>
+                     
+                      <div class="col-md-6">
+                       <div class="md-form mb-0">
+                            <input type="text" id="years" name="years" class="form-control">
+                            <label for="years" class="">Age</label>
+                        </div>
+                    </div>
+                    
+                </div>
+                        
+                
+                  <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <select class="browser-default custom-select" name="position">
+                                  <option selected>Position</option>
+                                  <option value="Intern">Intern</option>
+                                  <option value="Junior Developer">Junior Developer</option>
+                                  <option value="Middle Developer">Middle Developer</option>
+                                  <option value="Senior developer">Senior Developer</option>
+                                  <option value="Team Lead">Team Lead</option>
+                                  
+                            </select>
+                        </div>
+                    </div>
+                    
+                     <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <select class="browser-default custom-select" name="experience">
+                                  <option selected>Experience</option>
+                                  <option value="I have not">I have not</option>
+                                  <option value="0.5-3 years">0.5-3 years</option>
+                                  <option value="3-5 years">3-5 years</option>
+                                  <option value="More than 5 years">More than 5 years</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="row">
+                     <div class="col-md-12">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="education">
+                                  <option selected>Education</option>
+                                  <option value="Secondary education">Secondary education</option>
+                                  <option value="Junior Specialist">Junior Specialist</option>
+                                  <option value="Bachelor">Bachelor</option>
+                                  <option value="Master">Master</option>
+                            </select>
+                        </div>
+                     </div>
+                </div>
+                <hr>
+                <p class="text-center w-responsive mx-auto mb-3">Knowledge of programming languages</p>
+                <hr>
+                 <div class="row">
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_c_plus">
+                                  <option selected>С/C++</option>
+                                  <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_c_sharp">
+                                  <option selected>С#</option>
+                                  <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_pascal">
+                                  <option selected>Pascal</option>
+                                 <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_java">
+                                  <option selected>Java</option>
+                                  <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                </div>
+                
+                <div class="row">
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_html_css">
+                                  <option selected>HTML/CSS</option>
+                                  <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_JS">
+                                  <option selected>JavaScript</option>
+                                 <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_Bootstrap">
+                                  <option selected>Bootstap</option>
+                                 <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_php">
+                                  <option selected>php</option>
+                                  <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                </div>
+                
+                <div class="row">
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_python">
+                                  <option selected>Python</option>
+                                <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_django">
+                                  <option selected>Django</option>
+                                  <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_NET">
+                                  <option selected>.NET</option>
+                                  <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="lng_nodejs">
+                                  <option selected>Node.js</option>
+                                  <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                </div>
+                
+                <br><hr>
+                <p class="text-center w-responsive mx-auto mb-3">Content management system</p>
+                <hr>
+                
+                <div class="row">
+                     <div class="col-md-4">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="cms_wordpress">
+                                  <option selected>Wordpress</option>
+                                 <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="cms_joomla">
+                                  <option selected>Joomla</option>
+                                 <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="cms_drupal">
+                                  <option selected>Drupal</option>
+                                  <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                </div>
+                
+                <br><hr>
+                <p class="text-center w-responsive mx-auto mb-3">Computer skills, language knowledge</p>
+                <hr>
+                
+                <div class="row">
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="os_windows">
+                                  <option selected>Windows</option>
+                                 <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="os_linux">
+                                  <option selected>Linux</option>
+                                 <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="os_macos">
+                                  <option selected>MacOS</option>
+                                 <option value="don't now">don't know</option>
+                                  <option value="basic knowledge">basic knowledge</option>
+                                  <option value="experienced">experienced</option>
+                            </select>
+                        </div>
+                     </div>
+                     
+                     <div class="col-md-3">
+                         <div class="md-form mb-0">
+                             <select class="browser-default custom-select" name="english">
+                                  <option selected>English</option>
+                                  <option value="don't now">don't know</option>
+                                  <option value="first level">first level</option>
+                                  <option value="middle level">middle level</option>
+                                  <option value="expert">expert</option>
+                            </select>
+                        </div>
+                     </div>
+                </div>
+                
+                
+                
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your goal</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+                <div class="text-center text-md-left">
+                    <button class="btn btn-primary" type="submit">Send resume</button>
+                </div>
+            </form>
+            
+            
+            
+
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fab fa-java fa-7x"></i>
+                    <p>Desktop programming</p>
+                </li>
+                <br><br>
+                
+                <li><i class="fas fa-file-code fa-6x"></i>
+                    <p>Web programming</p>
+                </li>
+                <br>
+                <li><i class="fab fa-wordpress mt-4 fa-6x"></i>
+                    <p>System Administrator</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+         </div>
+     </div>
+     </div>
+     <br><br>
+  </main>
+  
+{% endblock %}

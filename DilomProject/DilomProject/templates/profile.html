@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %} ГОЛОВНА {% endblock %}
+
+
+<style type="text/css">
+    .imgg{
+        max-width: 50%;
+    }
+</style>
+
+
+{% block content%}
+
+
+
+    <main class="pt-5 max-lg-6">
+        <div class="row">
+         <div class="col-4 ml-auto mr-auto"> 
+             <div class="card">
+                <div class="card-body px-lg-4 pt-0">
+                <hr>
+                <h4 class="h3-responsive font-weight-bold text-center ">Account  image</h4>
+                <hr>
+                <img src="{{request.user.images.profile_pic.url}}"  class="img-fluid rounded-circle imgg">
+                <hr>
+                 </div>
+             </div>
+        </div>
+        
+        <div class="col-7 ml-auto mr-auto"> 
+             <div class="card">
+                <div class="card-body px-lg-5 pt-0">
+                    <hr>
+                       
+                             
+                    <h4 class="h3-responsive font-weight-bold text-center ">&nbsp; Profile {{request.user}} <a href="{{request.user.resume.resume_github}}" class=" border border-light rounded waves-effect"> <i class="fab fa-github"></i></a> </h4>  
+                   
+                    <hr>
+                     {% if request.user.resume %}
+                     
+                     <h5><strong>Name:</strong> {{request.user.resume.resume_PIB}}</h5>
+                     <h5><strong>Email:</strong> {{request.user.resume.resume_email}}</h5>
+                     <h5><strong>Adress:</strong> {{request.user.resume.resume_adress}}</h5>
+                     <h5><strong>Phone:</strong> {{request.user.resume.resume_phone}}</h5>
+                     <hr>
+                      
+                         {% if cmt %}
+                             <h5><strong>Resume processing status:</strong> <font color="red">Processed!</font></h5>
+                         
+                         {% else %}
+                             <h5><strong>Resume processing status:</strong> <font color="green">Under review</font></h5>
+                         {% endif %}
+                     
+                     {% else %}
+                        
+                         <div class="text-center text-md-center">
+                             <br>
+                             <a class="btn btn-primary" type="submit" href="/add_resume">Create resume</a>
+                             <br>
+                         </div>
+                     {% endif %}
+                 </div>
+             </div>
+        </div>
+        </div>
+    </main>
+{% endblock %}

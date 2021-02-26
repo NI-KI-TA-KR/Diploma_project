@@ -1,0 +1,474 @@
+{% extends 'base.html' %}
+
+{% block title %}{{resume.resume_PIB}}{% endblock %}
+
+{% block content%}
+<main class="pt-5 max-lg-5">
+     <div class="col-10 ml-auto mr-auto"> 
+         <div class="card">
+            
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!--Section: Contact v.2-->
+<section class="mb-0">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Resumе <font color="red">{{resume.id}}</font> :  {{resume.resume_PIB}}</h2>
+    <!--Section description-->
+    <hr>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="md-form mb-0 "> 
+                <center>
+                     <img src="{{resume.user.images.profile_pic.url}}"  class="img-fluid rounded-circle imgg" width="250" height="250">
+                 </center> 
+            </div>
+        </div>
+        
+        <div class="col-md-7">
+            <div class="md-form mb-0 ">
+                
+                <br>
+                <table class="table table-bordered table-hover">
+                  <tbody>
+                        <tr>
+                             <strong><th scope="row" class="black white-text" >Name</th></strong> 
+                              <td>{{resume.resume_PIB}}</td>
+                        </tr>
+                  
+                  
+                  <tbody>
+                        <tr>
+                          <th scope="row" class="black white-text">Phone</th>
+                          <td>{{resume.resume_phone}}</td>
+                        </tr>
+                        
+                        <tr>
+                          <th scope="row" class="black white-text">Email</th>
+                          <td>{{resume.resume_email}}</td>
+                        </tr>
+                  </tbody>
+                </table>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    <hr><br>
+</section>
+<!--Section: Contact v.2-->
+         </div>
+     </div>
+     </div>
+     <br><br>
+     
+     
+     
+     <div class="col-10 ml-auto mr-auto"> 
+         <div class="card">
+            
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!--Section: Contact v.2-->
+<section class="mb-0">
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="md-form mb-0 ">
+                <hr> <br>
+                <table class="table table-bordered">  
+                 <thead class="black white-text">
+                        <tr>
+                              <th scope="col">Home adress</th>
+                              <th scope="col">Years</th>
+                              <th scope="col">Position</th>
+                              <th scope="col">Experience</th>
+                              <th scope="col">Education</th>
+                              <th scope="col">English</th>
+                        </tr>
+                 </thead>
+                                                                 
+                  <tbody>
+                        <tr>
+                          <th scope="row">{{resume.resume_adress}}</th>
+                          <th scope="row">{{resume.resume_years}}</th>
+                          <th scope="row"  class="table-success"><stong>{{resume.resume_position}}</stong></th>
+                          <th scope="row">{{resume.resume_experience}}</th>
+                          <th scope="row">{{resume.resume_education}}</th>
+                          <th scope="row">{{resume.resume_english}}</th>
+                        </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <hr><br>
+</section>
+<!--Section: Contact v.2-->
+         </div>
+     </div>
+     </div>
+     
+
+     
+     <br><br>
+     
+          <div class="col-10 ml-auto mr-auto"> 
+         <div class="card">
+            
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!--Section: Contact v.2-->
+<section class="mb-0">
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="md-form mb-0 ">
+                <hr> <br>
+                <table class="table table-bordered table-hover">  
+                 <tbody>
+                        <tr>
+                              <th scope="col" class="black white-text">C/C++</th>
+                              <th scope="col" >{{resume.resume_lng_c_plus}}</th>
+                        </tr>
+                        
+                        <tr>
+                              <th scope="col" class="black white-text">C#</th>
+                              <th scope="col" >{{resume.resume_lng_c_sharp}}</th>
+                        </tr>
+                 
+                         <tr>
+                              <th scope="col" class="black white-text">Pascal</th>
+                              <th scope="col" >{{resume.resume_lng_pascal}}</th>
+                        </tr>
+                        
+                        <tr>
+                              <th scope="col" class="black white-text">Java</th>
+                              <th scope="col" >{{resume.resume_lng_java}}</th>
+                        </tr>                                       
+                  </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="md-form mb-0 ">
+                <hr> <br>
+                <table class="table table-bordered table-hover">  
+                 <tbody>
+                        <tr>
+                              <th scope="col" class="black white-text">HTML/CSS</th>
+                              <th scope="col" >{{resume.resume_lng_html_css}}</th>
+                        </tr>
+                        
+                        <tr>
+                              <th scope="col" class="black white-text">JavaScript</th>
+                              <th scope="col" >{{resume.resume_lng_JS}}</th>
+                        </tr>
+                 
+                         <tr>
+                              <th scope="col" class="black white-text">Bootstrap</th>
+                              <th scope="col" >{{resume.resume_lng_Bootstrap}}</th>
+                        </tr>
+                        
+                        <tr>
+                              <th scope="col" class="black white-text">PHP</th>
+                              <th scope="col" >{{resume.resume_lng_php}}</th>
+                        </tr>                                       
+                  </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="md-form mb-0 ">
+                <hr> <br>
+                <table class="table table-bordered table-hover">  
+                 <tbody>
+                        <tr>
+                              <th scope="col" class="black white-text">Python</th>
+                              <th scope="col" >{{resume.resume_lng_python}}</th>
+                        </tr>
+                        
+                        <tr>
+                              <th scope="col" class="black white-text">Django</th>
+                              <th scope="col" >{{resume.resume_lng_django}}</th>
+                        </tr>
+                 
+                         <tr>
+                              <th scope="col" class="black white-text">.NET</th>
+                              <th scope="col" >{{resume.resume_lng_NET}}</th>
+                        </tr>
+                        
+                        <tr>
+                              <th scope="col" class="black white-text">Node.js</th>
+                              <th scope="col" >{{resume.resume_lng_nodejs}}</th>
+                        </tr>                                       
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <hr><br>
+</section>
+<!--Section: Contact v.2-->
+         </div>
+     </div>
+     </div>
+     
+          <br><br>
+     
+          <div class="col-10 ml-auto mr-auto"> 
+         <div class="card">
+            
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!--Section: Contact v.2-->
+<section class="mb-0">
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="md-form mb-0 ">
+                <hr> <br>
+                <table class="table table-bordered table-hover">  
+                 <tbody>
+                        <tr>
+                              <th scope="col" class="black white-text">Wordpress</th>
+                              <th scope="col" >{{resume.resume_cms_wordpress}}</th>
+                        </tr>
+                        
+                        <tr>
+                              <th scope="col" class="black white-text">Joomla</th>
+                              <th scope="col" >{{resume.resume_cms_joomla}}</th>
+                        </tr>
+                 
+                         <tr>
+                              <th scope="col" class="black white-text">Drupal</th>
+                              <th scope="col" >{{resume.resume_cms_drupal}}</th>
+                        </tr>                                      
+                  </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="md-form mb-0 ">
+                <hr> <br>
+                <table class="table table-bordered table-hover">  
+                 <tbody>
+                        <tr>
+                              <th scope="col" class="black white-text">Windows</th>
+                              <th scope="col" >{{user.resume.resume_os_windows}}</th>
+                        </tr>
+                        
+                        <tr>
+                              <th scope="col" class="black white-text">Linux</th>
+                              <th scope="col" >{{user.resume.resume_os_linux}}</th>
+                        </tr>
+                 
+                         <tr>
+                              <th scope="col" class="black white-text">MacOS</th>
+                              <th scope="col" >{{user.resume.resume_os_macos}}</th>
+                        </tr>                                     
+                  </tbody>
+                </table>
+            </div>
+        </div>
+  
+    </div>
+    <hr><br>
+</section>
+<!--Section: Contact v.2-->
+         </div>
+     </div>
+     </div>
+     
+     <br><br>
+     
+             <div class="col-10 ml-auto mr-auto"> 
+         <div class="card">
+            
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!--Section: Contact v.2-->
+<section class="mb-0">
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="md-form mb-0 ">
+                <h2 class="h2-responsive font-weight-bold text-center my-4">System Position</h2>
+                <hr>
+                <h3 class="h3-responsive font-weight-bold text-center my-4">
+The intelligent analysis system "IT-candidate" believes that you can work:</h3>
+           <h3 class="h3-responsive font-weight-bold text-center my-4">
+<font color="red">{{user.position_area.system_position}} {{user.position_area.system_area}} </font></h3>
+            </div>
+        </div>
+  
+    </div>
+    <hr><br>
+</section>
+<!--Section: Contact v.2-->
+         </div>
+     </div>
+     </div>
+     
+     <br><br>
+     
+        <div class="col-10 ml-auto mr-auto"> 
+         <div class="card">
+            
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!--Section: Contact v.2-->
+<section class="mb-0">
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="md-form mb-0 ">
+                
+                
+                {% if latest_comments_list %} 
+	                {% for c in latest_comments_list %}
+                     <h6 class="h2-responsive font-weight-bold text-center my-4">
+                              Comment from company
+                     </h6><hr>
+                        {% if c.comment_type != "suit" %}
+                        <div class="alert alert-danger" role="alert" id="messages">
+                                    <h1 class="text-center w-responsive mx-auto mb-2"><strong>{{c.comment_type}}</strong></h1>
+                                </div>
+                        {% else %}
+                        <div class="alert alert-success" role="alert" id="messages">
+                                    <h1 class="text-center w-responsive mx-auto mb-2"><strong>{{c.comment_type}}</strong></h1>
+                                </div>
+                        {% endif %}
+                        <h5><strong><font color="red">{{c.author_name}}</font> :</strong> {{c.comment_text}}</h5>
+	                     
+	                {% endfor %}
+                    {% else %} 
+                           <h6 class="h2-responsive font-weight-bold text-center my-4">
+                               Leave a comment
+                           </h6>
+                           <hr>
+                           
+                            <form id="contact-form" name="contact-form" action="{% url 'resume:leave_comment' resume.id %}" method="POST">
+
+               {% csrf_token %}
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Name" name="name">
+                        </div>
+                    </div>
+
+                </div>
+                
+                  <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <select class="browser-default custom-select" name="type">
+                                  <option selected>Type</option>
+                                  <option value="suit">suit</option>
+                                  <option value="not suit">not suit</option> 
+                            </select>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+            <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Comment" name="text"></textarea>
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+                <div class="text-center text-md-left">
+                    <button class="btn btn-primary" type="submit">Send resume</button>
+                </div>
+            </form>
+                    {% endif %}
+            
+            </div>
+        </div>
+        
+  
+    </div>
+    <hr><br>
+</section>
+<!--Section: Contact v.2-->
+         </div>
+     </div>
+     </div>
+     
+     <br><br>
+  </main>
+ <!-- 
+<h2>{{resume.resume_PIB}}</h2>
+<p>{{resume.resume_position}}</p>
+<p>{{resume_contact_adress}}</p>
+<p>{{resume.resume_contact_phone}}</p>
+<p>{{resume.resume_date}}</p>
+
+<hr>
+<strong><font color="red">Комментар від компанії</font></strong>
+{% if latest_comments_list %} 
+	{% for c in latest_comments_list %}
+	 <p> <strong>{{c.author_name}}</strong>
+	     <p>{{c.comment_text}}</p>
+	 </p>
+	{% endfor %}
+{% else %} <br>
+Комментарю немає
+{% endif %}
+
+
+</hr>
+<hr>
+
+</hr>
+<form action="{% url 'resume:leave_comment' resume.id %}" method="POST">
+
+<!--{% url 'resume:leave_comment' resume.id %} 
+	{% csrf_token %}
+	
+	<input type="text" required placeholder="Ваше ім`я" name="name"> </br>
+	<textarea name="text" required="" placeholder="Текст коментарю" cols="30" rows="10"> </textarea><br>
+	<button type="submit">Залишити коментар</button>
+</form>
+-->
+{% endblock %}
