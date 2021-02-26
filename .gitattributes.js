@@ -1,2 +1,2 @@
 *.js linguist-vendored
-*.gs linguist-language=Django
+*.gs linguist-language=python
